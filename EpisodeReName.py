@@ -107,7 +107,7 @@ else:
     # python EpisodeReName.py --path /home/nate/data/极端试验样本/s1/ --delay 1 --overwrite 1 --name_format "S{season}E{ep} - {resolution}"
 
     ap = argparse.ArgumentParser()
-    ap.add_argument('--path', required=True, help='目标路径')
+    ap.add_argument('--path', required=False, default=os.getcwd(), help='目标路径')
     ap.add_argument(
         '--delay', required=False, help='重命名延迟(秒) 配合qb使用的参数, 默认为0秒不等待', type=int, default=0
     )
